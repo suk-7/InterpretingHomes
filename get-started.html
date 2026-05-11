@@ -1,0 +1,371 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started | Interpreting Homes</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="get-started-page">
+    <header>
+      <div class="container">
+        <h2>Interpreting Homes</h2>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="partners.html">For Partners</a>
+          <a href="get-started.html">Get Started</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-panel">
+        <div class="container get-started-layout">
+          <div class="contact-info">
+            <p class="eyebrow">Get started</p>
+            <h1>Reach out the way that works for you.</h1>
+            <p class="intro-text">
+              We respond within one business day. If you reach out after hours,
+              we will follow up the next morning.
+            </p>
+
+            <div class="contact-methods">
+              <a href="tel:+16145550142" class="contact-method">
+                <span class="contact-icon" aria-hidden="true">☎</span>
+                <span class="contact-copy">
+                  <span>Call</span>
+                  <strong>(614) 555-0142</strong>
+                </span>
+              </a>
+
+              <a href="tel:+16145550188" class="contact-method">
+                <span class="contact-icon" aria-hidden="true">◫</span>
+                <span class="contact-copy">
+                  <span>Videophone (VP)</span>
+                  <strong>(614) 555-0188</strong>
+                </span>
+              </a>
+
+              <a
+                href="mailto:hello@interpretinghomes.com"
+                class="contact-method"
+              >
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <span class="contact-copy">
+                  <span>Email</span>
+                  <strong>hello@interpretinghomes.com</strong>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form-card">
+            <p class="form-note">
+              Please don't share medical or insurance details here — we'll cover
+              those securely after we connect.
+            </p>
+
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-method">Best way to reach you</label>
+              <select id="contact-method" name="contact-method" required>
+                <option value="">Choose one</option>
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Videophone</option>
+                <option>Text message</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="language">Preferred language</label>
+              <select id="language" name="language" required>
+                <option value="">Choose one</option>
+                <option>ASL</option>
+                <option>English</option>
+                <option>Both</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">How can we help?</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us a little about what you need."
+              ></textarea>
+            </div>
+
+            <button class="submit-button" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid footer-grid-get-started">
+          <div>
+            <p class="footer-brand">Interpreting Homes</p>
+            <p class="footer-text">
+              Behavioral health, nursing, and ASL-informed care for the Deaf and
+              Hard-of-Hearing community.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-heading">Reach us</p>
+            <p class="footer-text">
+              Call (614) 555-0142<br />
+              VP (614) 555-0188<br />
+              hello@interpretinghomes.com
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-heading">Site</p>
+            <p class="footer-text footer-links">
+              <a href="legal/privacy-policy.html">Privacy policy</a><br />
+              <a href="legal/accessibility-statement.html"
+                >Accessibility statement</a
+              ><br />
+              <a href="legal/hipaa-notice.html">HIPAA notice</a><br />
+              <a href="legal/terms.html">Terms</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started | Interpreting Homes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      :root {
+        --teal: #1f4e5c;
+        --teal-dark: #163844;
+        --cream: #fbf6e8;
+        --terra: #c26b4d;
+      }
+      /* ── HEADER ── */
+      header {
+        background: var(--teal);
+        padding: 0 40px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--cream);
+      }
+      .logo-icon {
+        width: 32px;
+        height: 38px;
+        flex-shrink: 0;
+      }
+      .logo-name {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--cream);
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+      nav a {
+        color: var(--cream);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+      nav a:hover {
+        opacity: 1;
+      }
+      .nav-cta {
+        border: 1.5px solid rgba(255, 255, 255, 0.55) !important;
+        border-radius: 999px !important;
+        padding: 7px 18px !important;
+        opacity: 1 !important;
+        font-weight: 600 !important;
+      }
+      .nav-cta:hover {
+        background: rgba(255, 255, 255, 0.08) !important;
+      }
+      @media (max-width: 820px) {
+        header {
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="get-started-page">
+    <!-- HEADER -->
+    <header>
+      <a href="index.html" class="logo">
+        <svg
+          class="logo-icon"
+          viewBox="0 0 32 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M2 2h11v34l-5.5-5-5.5 5V2z" fill="#c26b4d" />
+          <path d="M13 2h11v34l-5.5-5-5.5 5V2z" fill="#fbf6e8" opacity="0.85" />
+        </svg>
+        <span class="logo-name">Interpreting Homes</span>
+      </a>
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="partners.html">For partners</a>
+        <a href="get-started.html" class="nav-cta">Get started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-panel">
+        <div class="container get-started-layout">
+          <div class="contact-info">
+            <p class="eyebrow">Get started</p>
+            <h1>Reach out the way that works for you.</h1>
+            <p class="intro-text">
+              We respond within one business day. If you reach out after hours,
+              we will follow up the next morning.
+            </p>
+
+            <div class="contact-methods">
+              <a href="tel:+16145550142" class="contact-method">
+                <span class="contact-icon" aria-hidden="true">☎</span>
+                <span class="contact-copy">
+                  <span>Call</span>
+                  <strong>(614) 555-0142</strong>
+                </span>
+              </a>
+
+              <a href="tel:+16145550188" class="contact-method">
+                <span class="contact-icon" aria-hidden="true">◫</span>
+                <span class="contact-copy">
+                  <span>Videophone (VP)</span>
+                  <strong>(614) 555-0188</strong>
+                </span>
+              </a>
+
+              <a
+                href="mailto:hello@interpretinghomes.com"
+                class="contact-method"
+              >
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <span class="contact-copy">
+                  <span>Email</span>
+                  <strong>hello@interpretinghomes.com</strong>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form-card">
+            <p class="form-note">
+              Please don't share medical or insurance details here — we'll cover
+              those securely after we connect.
+            </p>
+
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-method">Best way to reach you</label>
+              <select id="contact-method" name="contact-method" required>
+                <option value="">Choose one</option>
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Videophone</option>
+                <option>Text message</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="language">Preferred language</label>
+              <select id="language" name="language" required>
+                <option value="">Choose one</option>
+                <option>ASL</option>
+                <option>English</option>
+                <option>Both</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">How can we help?</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us a little about what you need."
+              ></textarea>
+            </div>
+
+            <button class="submit-button" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid footer-grid-get-started">
+          <div>
+            <p class="footer-brand">Interpreting Homes</p>
+            <p class="footer-text">
+              Behavioral health, nursing, and ASL-informed care for the Deaf and
+              Hard-of-Hearing community.
+            </p>
+          </div>
+          <div>
+            <p class="footer-heading">Reach us</p>
+            <p class="footer-text">
+              Call (614) 555-0142<br />
+              VP (614) 555-0188<br />
+              hello@interpretinghomes.com
+            </p>
+          </div>
+          <div>
+            <p class="footer-heading">Site</p>
+            <p class="footer-text footer-links">
+              <a href="legal/privacy-policy.html">Privacy policy</a><br />
+              <a href="legal/accessibility-statement.html"
+                >Accessibility statement</a
+              ><br />
+              <a href="legal/hipaa-notice.html">HIPAA notice</a><br />
+              <a href="legal/terms.html">Terms</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
