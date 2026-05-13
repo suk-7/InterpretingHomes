@@ -58,8 +58,8 @@
         color: var(--cream);
       }
       .logo-icon {
-        width: 32px;
         height: 38px;
+        width: auto;
         flex-shrink: 0;
       }
       .logo-name {
@@ -103,6 +103,7 @@
         max-width: 1100px;
         margin: auto;
       }
+
       .section-eyebrow {
         font-family: "Inter", sans-serif;
         font-size: 0.78rem;
@@ -113,34 +114,70 @@
         margin-bottom: 10px;
       }
       .services-section h2 {
-        font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+        font-size: clamp(1.7rem, 3vw, 2.6rem);
         color: var(--teal-dark);
         margin-bottom: 14px;
-        line-height: 1.2;
+        line-height: 1.15;
+        max-width: 640px;
       }
       .services-intro {
         color: #2e5059;
-        max-width: 860px;
-        margin-bottom: 36px;
+        max-width: 680px;
+        margin-bottom: 44px;
         font-size: 0.97rem;
         line-height: 1.7;
       }
 
-      /* ── SERVICE CARDS ── */
-      .service-list {
+      /* ── GROUP LABEL ── */
+      .group-label {
         display: flex;
-        flex-direction: column;
-        gap: 18px;
-        margin-bottom: 36px;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        margin-top: 40px;
       }
+      .group-label:first-of-type {
+        margin-top: 0;
+      }
+      .group-label-line {
+        width: 28px;
+        height: 2px;
+        background: var(--terra);
+        flex-shrink: 0;
+      }
+      .group-label span {
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #5a7a80;
+      }
+
+      /* ── SERVICE GRID ── */
+      .service-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 0;
+      }
+
+      /* ── SERVICE CARD ── */
       .service-card {
         background: #fff;
         border: 1px solid rgba(210, 196, 172, 0.7);
         border-radius: 14px;
-        padding: 28px 28px 26px;
+        padding: 24px 24px 26px;
+      }
+      .service-card.supportive {
+        background: #f0e9d6;
+        border-color: rgba(180, 165, 135, 0.5);
+      }
+      .service-card-top {
         display: flex;
-        gap: 22px;
         align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 16px;
       }
       .service-icon-wrap {
         width: 48px;
@@ -151,35 +188,64 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        font-size: 1.2rem;
         color: var(--teal-dark);
-        margin-top: 2px;
       }
-      .service-body h3 {
-        font-size: 1.05rem;
+      .service-card.supportive .service-icon-wrap {
+        background: #e5dcc4;
+      }
+      .service-title-block {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .service-card h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
         font-weight: 700;
         color: var(--teal-dark);
-        margin-bottom: 8px;
+        line-height: 1.3;
       }
-      .service-body p {
-        font-size: 0.93rem;
+      .service-meta {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #5a7a80;
+      }
+      .service-meta-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--terra);
+        flex-shrink: 0;
+      }
+      .service-divider {
+        border: none;
+        border-top: 1px solid rgba(210, 196, 172, 0.5);
+        margin: 14px 0;
+      }
+      .service-card p {
+        font-size: 0.91rem;
         color: #2e5059;
-        line-height: 1.65;
-        margin-bottom: 8px;
+        line-height: 1.7;
+        margin-bottom: 14px;
       }
-      .service-body p:last-child {
+      .service-card p:last-child {
         margin-bottom: 0;
       }
-      .common {
-        font-size: 0.88rem !important;
-        color: #4a7a84 !important;
-      }
-      .common strong {
+      .service-card p strong {
+        font-weight: 700;
         color: var(--teal-dark);
-        font-weight: 600;
       }
 
       /* ── ORG BANNER ── */
+      .org-banner-wrap {
+        margin-top: 44px;
+      }
       .org-banner {
         background: var(--teal-dark);
         border-radius: 14px;
@@ -226,7 +292,6 @@
         background: var(--teal-dark);
         color: var(--cream);
         padding: 44px 40px;
-        margin-top: 0;
       }
       .footer-inner {
         max-width: 1100px;
@@ -273,9 +338,8 @@
         .services-section {
           padding: 44px 20px;
         }
-        .service-card {
-          flex-direction: column;
-          gap: 14px;
+        .service-grid {
+          grid-template-columns: 1fr;
         }
         .org-banner {
           flex-direction: column;
@@ -300,9 +364,6 @@
           alt="Interpreting Homes"
           class="logo-icon"
         />
-          <path d="M2 2h11v34l-5.5-5-5.5 5V2z" fill="#c26b4d" />
-          <path d="M13 2h11v34l-5.5-5-5.5 5V2z" fill="#fbf6e8" opacity="0.85" />
-        </svg>
         <span class="logo-name">Interpreting Homes</span>
       </a>
       <nav>
@@ -318,123 +379,294 @@
       <section class="services-section">
         <div class="services-inner">
           <p class="section-eyebrow">What we offer</p>
-          <h2>Three core services. One integrated team.</h2>
+          <h2>Clinical care and the support that makes it work.</h2>
           <p class="services-intro">
-            A behavioral health technician with deep experience in the Deaf
-            community and a registered nurse with broad clinical expertise —
-            working together so you don't have to translate yourself across
-            providers.
+            A licensed psychologist, a master's-prepared nurse, and an
+            ASL-fluent care navigator — working together so you don't have to
+            translate yourself across providers.
           </p>
 
-          <div class="service-list">
+          <!-- PRIMARY CLINICAL SERVICES -->
+          <div class="group-label">
+            <div class="group-label-line"></div>
+            <span>Primary clinical services</span>
+          </div>
+
+          <div class="service-grid">
             <div class="service-card">
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  />
-                </svg>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                  </svg>
+                </div>
+                <div class="service-title-block">
+                  <h3>Individual psychotherapy</h3>
+                  <div class="service-meta">
+                    <span class="service-meta-dot"></span>
+                    <span>Telehealth · Statewide Ohio</span>
+                  </div>
+                </div>
               </div>
-              <div class="service-body">
-                <h3>Behavioral health support</h3>
-                <p>
-                  Trauma-informed mental health support, skill building, crisis
-                  help, and case management. Sessions in ASL or spoken English,
-                  in-home or in the community — wherever you feel safest.
-                </p>
-                <p class="common">
-                  <strong>Common reasons people come to us:</strong> anxiety,
-                  depression, post-trauma support, school or work stress,
-                  navigating life transitions, family communication conflict.
-                </p>
-              </div>
+              <p>
+                Doctoral-level psychotherapy for anxiety, depression, trauma,
+                grief, and life transitions. Delivered by a licensed
+                psychologist via secure telehealth under PSYPACT, with an ASL
+                mental-health interpreter when needed.
+              </p>
+              <hr class="service-divider" />
+              <p>
+                <strong>For:</strong> Adults and teens navigating mental health,
+                recovery from trauma, family transitions, or co-occurring
+                medical and emotional concerns.
+              </p>
             </div>
 
             <div class="service-card">
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <line x1="12" y1="5" x2="12" y2="19" />
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                </svg>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                </div>
+                <div class="service-title-block">
+                  <h3>Psychological assessments</h3>
+                  <div class="service-meta">
+                    <span class="service-meta-dot"></span>
+                    <span>Telehealth · Statewide Ohio</span>
+                  </div>
+                </div>
               </div>
-              <div class="service-body">
-                <h3>Nursing support</h3>
-                <p>
-                  Care coordination, medication education, chronic-condition
-                  coaching, and post-hospital follow-up from a registered nurse
-                  who works in ASL-first communication.
-                </p>
-                <p class="common">
-                  <strong>Common reasons people come to us:</strong> diabetes
-                  management, blood pressure, recovering from surgery,
-                  understanding new prescriptions, preparing for a specialist
-                  appointment.
-                </p>
-              </div>
+              <p>
+                Comprehensive evaluations for SSDI disability claims, VA
+                Compensation &amp; Pension exams, cognitive screening, and
+                fitness-for-duty. Administered and interpreted by a doctoral
+                psychologist with two decades of assessment experience.
+              </p>
+              <hr class="service-divider" />
+              <p>
+                <strong>For:</strong> Adults seeking disability determinations,
+                veterans navigating C&amp;P, or families needing a thorough
+                cognitive or psychological evaluation.
+              </p>
             </div>
 
             <div class="service-card">
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <line x1="3" y1="12" x2="21" y2="12" />
-                  <line x1="3" y1="6" x2="21" y2="6" />
-                  <line x1="3" y1="18" x2="21" y2="18" />
-                </svg>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </div>
+                <div class="service-title-block">
+                  <h3>Skilled nursing &amp; care coordination</h3>
+                  <div class="service-meta">
+                    <span class="service-meta-dot"></span>
+                    <span>In-home · Greater Columbus</span>
+                  </div>
+                </div>
               </div>
-              <div class="service-body">
-                <h3>ASL-informed health navigation</h3>
-                <p>
-                  Help finding the right doctor, understanding paperwork,
-                  preparing for appointments, and bridging the gaps the system
-                  leaves behind. Guidance and advocacy — not interpreting.
-                </p>
-                <p class="common">
-                  <strong>Important:</strong> we are not RID/BEI-credentialed
-                  interpreters and do not provide independent interpreting. We
-                  help you make sense of healthcare alongside your medical team.
-                </p>
+              <p>
+                Wound care, central-line and PICC management, medication
+                education, post-hospital follow-up, and complex chronic-disease
+                coordination — delivered by a master's-prepared RN with two
+                decades in Ohio home health.
+              </p>
+              <hr class="service-divider" />
+              <p>
+                <strong>For:</strong> Adults recovering from surgery or
+                hospitalization, managing diabetes or heart conditions, or
+                coordinating care across multiple specialists.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                    <line x1="9" y1="9" x2="9.01" y2="9" />
+                    <line x1="15" y1="9" x2="15.01" y2="9" />
+                  </svg>
+                </div>
+                <div class="service-title-block">
+                  <h3>Hospice &amp; palliative care</h3>
+                  <div class="service-meta">
+                    <span class="service-meta-dot"></span>
+                    <span>In-home · Greater Columbus</span>
+                  </div>
+                </div>
               </div>
+              <p>
+                End-of-life nursing care, symptom management, advance care
+                planning, and grief support — for D/HOH patients and their
+                families. Ohio's first integrated hospice service designed for
+                the Deaf community.
+              </p>
+              <hr class="service-divider" />
+              <p>
+                <strong>For:</strong> Patients with serious illness, families
+                facing end-of-life decisions, or anyone needing palliative
+                support alongside curative care.
+              </p>
+            </div>
+          </div>
+
+          <!-- SUPPORTIVE SERVICES -->
+          <div class="group-label" style="margin-top: 44px">
+            <div class="group-label-line"></div>
+            <span>Supportive services</span>
+          </div>
+
+          <div class="service-grid">
+            <div class="service-card supportive">
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="9" y="2" width="6" height="4" rx="1" />
+                    <path d="M4 6h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z" />
+                    <path d="M4 10v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10" />
+                    <line x1="9" y1="15" x2="15" y2="15" />
+                  </svg>
+                </div>
+                <div class="service-title-block">
+                  <h3>Behavioral health &amp; skill building</h3>
+                  <div class="service-meta">
+                    <span class="service-meta-dot"></span>
+                    <span>In-home or Telehealth · ASL</span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Community Psychiatric Supportive Treatment (CPST), case
+                management, crisis support, and skill building — delivered in
+                ASL by a behavioral health specialist under clinical
+                supervision. Wraps around therapy to make it work in real life.
+              </p>
+              <hr class="service-divider" />
+              <p>
+                <strong>For:</strong> People who need more than one therapy hour
+                a week — help managing daily life, family relationships, school
+                or work, or recovery between sessions.
+              </p>
+            </div>
+
+            <div class="service-card supportive">
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                  </svg>
+                </div>
+                <div class="service-title-block">
+                  <h3>ASL-informed health navigation</h3>
+                  <div class="service-meta">
+                    <span class="service-meta-dot"></span>
+                    <span>In-home or Telehealth · ASL</span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Help finding the right specialist, understanding paperwork,
+                preparing for appointments, advocating across hearing providers,
+                and bridging the gaps the system leaves behind. Guidance and
+                advocacy — not independent interpreting.
+              </p>
+              <hr class="service-divider" />
+              <p>
+                <strong>Note:</strong> We are not RID or BEI-credentialed
+                interpreters and do not provide independent interpreting. We
+                help you make sense of healthcare alongside your medical team.
+              </p>
             </div>
           </div>
 
           <!-- ORG BANNER -->
-          <div class="org-banner">
-            <div>
-              <p class="org-eyebrow">Also available for organizations</p>
-              <p>
-                Training and consulting for agencies. Sterile processing
-                workforce development for D/HOH adults entering healthcare
-                careers.
-              </p>
+          <div class="org-banner-wrap">
+            <div class="org-banner">
+              <div>
+                <p class="org-eyebrow">Also available for organizations</p>
+                <p>
+                  Training and consulting for agencies. Sterile processing
+                  workforce development for D/HOH adults entering healthcare
+                  careers.
+                </p>
+              </div>
+              <a href="partners.html" class="btn-partner">Partner with us →</a>
             </div>
-            <a href="partners.html" class="btn-partner">Partner with us →</a>
           </div>
         </div>
       </section>
