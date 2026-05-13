@@ -58,8 +58,8 @@
         color: var(--cream);
       }
       .logo-icon {
-        width: 32px;
         height: 38px;
+        width: auto;
         flex-shrink: 0;
       }
       .logo-name {
@@ -94,19 +94,7 @@
         background: rgba(255, 255, 255, 0.08) !important;
       }
 
-      /* ── ABOUT HERO ── */
-      .about-section {
-        padding: 56px 40px 48px;
-        background: var(--cream);
-      }
-      .about-inner {
-        max-width: 1100px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
-        align-items: start;
-      }
+      /* ── SHARED ── */
       .section-eyebrow {
         font-family: "Inter", sans-serif;
         font-size: 0.78rem;
@@ -116,20 +104,141 @@
         color: var(--terra);
         margin-bottom: 12px;
       }
+
+      /* ── TEAM SECTION ── */
+      .team-section {
+        padding: 56px 40px 64px;
+        background: var(--cream);
+        border-bottom: 1px solid rgba(210, 196, 172, 0.5);
+      }
+      .team-inner {
+        max-width: 1100px;
+        margin: auto;
+      }
+      .team-section h2 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        color: var(--teal-dark);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .team-intro {
+        font-size: 0.97rem;
+        color: #2e5059;
+        max-width: 700px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .team-card {
+        background: #fff;
+        border: 1px solid rgba(210, 196, 172, 0.7);
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 20px 20px 24px;
+      }
+      .team-photo {
+        background: #ede7d0;
+        border-radius: 12px;
+        width: 100%;
+        aspect-ratio: 4/3.2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+      .team-initials {
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: var(--terra);
+        opacity: 0.45;
+      }
+      .team-photo-label {
+        font-size: 0.78rem;
+        color: #8a7a60;
+        font-style: italic;
+      }
+      .team-card h3 {
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--teal-dark);
+        margin-bottom: 6px;
+      }
+      .team-role {
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--terra);
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+      .team-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .tag {
+        font-family: "Inter", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--teal-dark);
+        background: #f0e9d6;
+        border: 1px solid rgba(180, 165, 135, 0.4);
+        border-radius: 999px;
+        padding: 3px 10px;
+      }
+      .team-bio {
+        font-size: 0.88rem;
+        color: #2e5059;
+        line-height: 1.7;
+      }
+
+      /* ── ABOUT STORY ── */
+      .about-section {
+        padding: 64px 40px 56px;
+        background: var(--cream);
+        border-bottom: 1px solid rgba(210, 196, 172, 0.5);
+      }
+      .about-inner {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: start;
+      }
+      .about-eyebrow {
+        font-family: "Inter", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--teal-dark);
+        opacity: 0.55;
+        margin-bottom: 14px;
+      }
       .about-left h2 {
-        font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+        font-size: clamp(1.7rem, 2.8vw, 2.4rem);
         color: var(--teal-dark);
         line-height: 1.2;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
       }
       .about-left p {
-        font-size: 0.95rem;
+        font-size: 0.97rem;
         color: #2e5059;
-        line-height: 1.75;
-        margin-bottom: 16px;
+        line-height: 1.8;
+        margin-bottom: 18px;
       }
       .about-left p:last-of-type {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
       }
       .link-arrow {
         display: inline-flex;
@@ -147,73 +256,69 @@
         border-color: var(--terra-dark);
       }
 
-      /* ── TEAM CARD ── */
-      .team-card {
+      /* ── YES/NO CARD ── */
+      .yesno-card {
         background: #eee8d3;
         border-radius: 14px;
-        padding: 28px 24px;
+        padding: 28px 26px;
       }
-      .team-card-eyebrow {
+      .yesno-eyebrow {
         font-family: "Inter", sans-serif;
-        font-size: 0.78rem;
-        font-weight: 600;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
         color: #5a7a80;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
       }
-      .team-member {
+      .yesno-item {
         display: flex;
+        gap: 14px;
         align-items: flex-start;
-        gap: 16px;
-        padding: 16px 0;
-        border-bottom: 1px solid rgba(180, 168, 140, 0.45);
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(180, 168, 140, 0.35);
       }
-      .team-member:first-of-type {
+      .yesno-item:first-of-type {
         padding-top: 0;
       }
-      .team-member:last-of-type {
+      .yesno-item:last-of-type {
         border-bottom: none;
         padding-bottom: 0;
       }
-      .team-avatar {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .yesno-badge {
         font-family: "Inter", sans-serif;
+        font-size: 0.7rem;
         font-weight: 700;
-        font-size: 0.82rem;
+        letter-spacing: 0.05em;
         color: #fff;
+        border-radius: 5px;
+        padding: 3px 8px;
         flex-shrink: 0;
+        margin-top: 2px;
       }
-      .avatar-rn {
-        background: var(--teal-dark);
-      }
-      .avatar-bh {
+      .badge-yes {
         background: var(--terra);
       }
-      .avatar-plus {
-        background: #4a7a84;
+      .badge-no {
+        background: var(--teal-dark);
       }
-      .team-info h4 {
+      .yesno-text h4 {
         font-family: "Inter", sans-serif;
         font-size: 0.95rem;
         font-weight: 700;
         color: var(--teal-dark);
         margin-bottom: 3px;
       }
-      .team-info p {
+      .yesno-text p {
         font-size: 0.85rem;
         color: #5a7a80;
-        line-height: 1.4;
+        line-height: 1.5;
       }
 
       /* ── FAQ ── */
       .faq-section {
-        padding: 56px 40px 64px;
+        padding: 64px 40px 72px;
         background: var(--cream);
-        border-top: 1px solid rgba(210, 196, 172, 0.5);
       }
       .faq-inner {
         max-width: 1100px;
@@ -228,13 +333,12 @@
       .faq-list {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 10px;
       }
       .faq-item {
         background: #fff;
         border: 1px solid rgba(210, 196, 172, 0.7);
-        border-radius: 10px;
-        margin-bottom: 10px;
+        border-radius: 12px;
         overflow: hidden;
       }
       .faq-item summary {
@@ -244,32 +348,105 @@
         align-items: center;
         padding: 20px 24px;
         font-size: 0.97rem;
-        font-weight: 500;
+        font-weight: 700;
         color: var(--teal-dark);
         cursor: pointer;
         user-select: none;
+        gap: 16px;
       }
       .faq-item summary::-webkit-details-marker {
         display: none;
       }
       .faq-icon {
         color: var(--terra);
-        font-size: 1.25rem;
-        font-weight: 300;
-        line-height: 1;
+        font-size: 1.1rem;
+        font-weight: 400;
         flex-shrink: 0;
         transition: transform 0.2s;
+        line-height: 1;
       }
       .faq-item[open] .faq-icon {
         transform: rotate(45deg);
       }
-      .faq-item .faq-body {
-        padding: 0 24px 20px;
+      .faq-body {
+        padding: 0 24px 22px;
         font-size: 0.93rem;
         color: #2e5059;
+        line-height: 1.75;
+      }
+
+      /* ── LOCATION ── */
+      .location-section {
+        padding: 64px 40px 72px;
+        background: var(--cream-dark);
+        border-top: 1px solid rgba(210, 196, 172, 0.5);
+      }
+      .location-inner {
+        max-width: 1100px;
+        margin: auto;
+      }
+      .location-section h2 {
+        font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+        color: var(--teal-dark);
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .location-lead {
+        font-size: 0.95rem;
+        color: #2e5059;
+        margin-bottom: 36px;
         line-height: 1.7;
-        border-top: 1px solid rgba(210, 196, 172, 0.4);
-        padding-top: 16px;
+        max-width: 560px;
+      }
+      .location-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 28px;
+        align-items: start;
+      }
+      .location-map {
+        border-radius: 14px;
+        overflow: hidden;
+        height: 340px;
+        border: 1px solid rgba(210, 196, 172, 0.7);
+      }
+      .location-details {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .location-card {
+        background: #fff;
+        border: 1px solid rgba(210, 196, 172, 0.7);
+        border-radius: 10px;
+        padding: 14px 18px;
+      }
+      .loc-label {
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #5a7a80;
+        margin-bottom: 4px;
+      }
+      .loc-value {
+        font-size: 0.92rem;
+        color: var(--teal-dark);
+        line-height: 1.6;
+      }
+      .loc-value a {
+        color: var(--terra);
+        text-decoration: none;
+      }
+      .loc-value a:hover {
+        text-decoration: underline;
+      }
+      .loc-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 4px;
       }
 
       /* ── FOOTER ── */
@@ -316,23 +493,30 @@
       }
 
       /* ── RESPONSIVE ── */
-      @media (max-width: 820px) {
+      @media (max-width: 900px) {
         header {
           padding: 0 20px;
         }
-        .about-section {
-          padding: 44px 20px;
+        .team-section,
+        .about-section,
+        .faq-section {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .team-grid {
+          grid-template-columns: 1fr;
         }
         .about-inner {
           grid-template-columns: 1fr;
           gap: 32px;
         }
-        .faq-section {
-          padding: 44px 20px 52px;
+        .location-grid {
+          grid-template-columns: 1fr;
         }
-        footer {
-          padding: 36px 20px;
+        .location-map {
+          height: 260px;
         }
+
         .footer-inner {
           grid-template-columns: 1fr;
           gap: 24px;
@@ -349,9 +533,6 @@
           alt="Interpreting Homes"
           class="logo-icon"
         />
-          <path d="M2 2h11v34l-5.5-5-5.5 5V2z" fill="#c26b4d" />
-          <path d="M13 2h11v34l-5.5-5-5.5 5V2z" fill="#fbf6e8" opacity="0.85" />
-        </svg>
         <span class="logo-name">Interpreting Homes</span>
       </a>
       <nav>
@@ -363,124 +544,327 @@
     </header>
 
     <main>
-      <!-- ABOUT HERO -->
+      <!-- TEAM SECTION (existing) -->
+      <section class="team-section">
+        <div class="team-inner">
+          <p class="section-eyebrow">The team you'll work with</p>
+          <h2>Three clinicians, one shared commitment.</h2>
+          <p class="team-intro">
+            We're a small specialty practice on purpose. You'll know everyone on
+            your care team by name, and they'll know each other.
+          </p>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-photo">
+                <span class="team-initials">JS</span>
+                <span class="team-photo-label">[Photo to be added]</span>
+              </div>
+              <h3>Jonathan J. Shelton, Psy.D.</h3>
+              <p class="team-role">Clinical Director · Licensed Psychologist</p>
+              <div class="team-tags">
+                <span class="tag">PsyD (APA)</span>
+                <span class="tag">AZ #4362</span>
+                <span class="tag">PSYPACT®</span>
+              </div>
+              <p class="team-bio">
+                Doctoral-level psychologist with over a decade across military,
+                residential treatment, geriatric, and private practice settings.
+                APA-accredited internship at Rockland Psychiatric Center.
+              </p>
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <span class="team-initials">AS</span>
+                <span class="team-photo-label">[Photo to be added]</span>
+              </div>
+              <h3>Amanda Shelton, MSN, RN</h3>
+              <p class="team-role">Director of Nursing Services</p>
+              <div class="team-tags">
+                <span class="tag">MSN</span>
+                <span class="tag">BSN</span>
+                <span class="tag">RN — Ohio</span>
+                <span class="tag">OASIS</span>
+              </div>
+              <p class="team-bio">
+                Master's-prepared admission nurse with two decades in Ohio home
+                health and hospice — most recently at Ohio Health and Mount
+                Carmel. Hands-on clinical skills in wound care, chronic disease
+                management, and care transitions.
+              </p>
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <span class="team-initials">RS</span>
+                <span class="team-photo-label">[Photo to be added]</span>
+              </div>
+              <h3>Robert Shelton, B.A.</h3>
+              <p class="team-role">
+                ASL Care Navigator · Behavioral Health Specialist
+              </p>
+              <div class="team-tags">
+                <span class="tag">ASL-fluent</span>
+                <span class="tag">BHT experience</span>
+                <span class="tag">CRCST</span>
+                <span class="tag">CFER</span>
+              </div>
+              <p class="team-bio">
+                ASL care navigator with years of direct experience supporting
+                Deaf and Hard-of-Hearing individuals across behavioral health
+                and healthcare settings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT STORY (screenshot 1) -->
       <section class="about-section">
         <div class="about-inner">
           <div class="about-left">
-            <p class="section-eyebrow">About</p>
+            <p class="about-eyebrow">About</p>
             <h2>Started by people who lived the gaps they're filling.</h2>
             <p>
-              Interpreting Homes was founded by a registered nurse and a
-              behavioral health technician who spent years watching Deaf and
-              Hard-of-Hearing patients fall through cracks no one was assigned
-              to catch.
+              Interpreting Homes is a Shelton family practice. Three healthcare
+              professionals — a psychologist, a nurse, and an ASL-fluent care
+              specialist — who spent years watching Deaf and Hard-of-Hearing
+              patients fall through cracks no one was assigned to catch.
             </p>
             <p>
-              We kept the name even though we're not interpreters — because the
-              work is about interpretation in the broader sense: making the
-              systems of healthcare make sense, in the language and culture of
-              the people we serve.
+              We kept the name even though we're not interpreters, because the
+              work is about <em>interpretation in the larger sense</em>: making
+              healthcare systems make sense, in the language and culture of the
+              people we serve.
+            </p>
+            <p>
+              This is a small specialty practice on purpose. We're not trying to
+              be everyone's everything — we're trying to be the right thing for
+              the people the system keeps missing.
             </p>
             <a href="#story" class="link-arrow">Read our full story →</a>
           </div>
 
-          <div class="team-card">
-            <p class="team-card-eyebrow">The team you'll work with</p>
+          <div class="yesno-card">
+            <p class="yesno-eyebrow">What we are — and aren't</p>
 
-            <div class="team-member">
-              <div class="team-avatar avatar-rn">RN</div>
-              <div class="team-info">
-                <h4>Registered Nurse, Co-founder</h4>
-                <p>Clinical lead · medical and care coordination</p>
+            <div class="yesno-item">
+              <span class="yesno-badge badge-yes">YES</span>
+              <div class="yesno-text">
+                <h4>A licensed clinical practice</h4>
+                <p>
+                  Psychotherapy, nursing, hospice — under real clinical
+                  credentials
+                </p>
               </div>
             </div>
-
-            <div class="team-member">
-              <div class="team-avatar avatar-bh">BH</div>
-              <div class="team-info">
-                <h4>Behavioral Health Tech, Co-founder</h4>
-                <p>ASL-fluent · trauma-informed practice</p>
+            <div class="yesno-item">
+              <span class="yesno-badge badge-yes">YES</span>
+              <div class="yesno-text">
+                <h4>Culturally-fluent ASL care</h4>
+                <p>Robert is on every care team from intake forward</p>
               </div>
             </div>
-
-            <div class="team-member">
-              <div class="team-avatar avatar-plus">+</div>
-              <div class="team-info">
-                <h4>Growing team</h4>
-                <p>Hiring D/HOH-fluent clinicians and care staff</p>
+            <div class="yesno-item">
+              <span class="yesno-badge badge-no">NO</span>
+              <div class="yesno-text">
+                <h4>An interpreting service</h4>
+                <p>
+                  We are not RID/BEI credentialed. We don't offer independent
+                  interpreting.
+                </p>
+              </div>
+            </div>
+            <div class="yesno-item">
+              <span class="yesno-badge badge-no">NO</span>
+              <div class="yesno-text">
+                <h4>A 24/7 crisis line</h4>
+                <p>
+                  For psychiatric emergencies, call 988 or your local crisis
+                  line
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FAQ -->
+      <!-- FAQ (screenshots 2 & 3) -->
       <section class="faq-section">
         <div class="faq-inner">
           <p class="section-eyebrow">Frequently asked</p>
           <h2>Questions we hear often.</h2>
-
           <div class="faq-list">
-            <details class="faq-item">
+            <details class="faq-item" open>
+              <summary>
+                Where is your psychologist located?
+                <span class="faq-icon">×</span>
+              </summary>
+              <div class="faq-body">
+                Jonathan is a licensed psychologist in Arizona who holds an
+                Authority to Practice Interjurisdictional Telepsychology (APIT)
+                under PSYPACT — the multi-state compact that allows
+                psychologists to provide telepsychology to clients in other
+                PSYPACT states, including Ohio. All of his work with
+                Interpreting Homes is via secure HIPAA-compliant telehealth. The
+                same Ohio rules of clinical practice apply.
+              </div>
+            </details>
+
+            <details class="faq-item" open>
               <summary>
                 Do I need to know ASL to work with you?
-                <span class="faq-icon">+</span>
+                <span class="faq-icon">×</span>
               </summary>
               <div class="faq-body">
-                No. We can provide support in ASL, spoken English, or both. Our
-                team meets you in whatever communication mode works best for
-                you.
+                No. We work in ASL, English, or a mix — whichever you prefer. We
+                support Deaf, Hard-of-Hearing, late-deafened, and hearing family
+                members alike. Some sessions are conducted in ASL directly;
+                others use a mental-health-trained ASL interpreter alongside our
+                psychologist.
               </div>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" open>
               <summary>
-                Are you interpreters?
-                <span class="faq-icon">+</span>
+                Are you interpreters? <span class="faq-icon">×</span>
               </summary>
               <div class="faq-body">
-                No. We are not RID/BEI-credentialed interpreters and do not
-                provide independent interpreting services. We offer ASL-informed
-                health navigation — guidance and advocacy alongside your medical
-                team, not in place of a qualified interpreter.
+                No. We are not RID or BEI-credentialed and do not provide
+                independent interpreting services. We are clinicians who use ASL
+                in our own care delivery and help you navigate the broader
+                healthcare system. When ASL interpretation is needed inside a
+                clinical session, we use credentialed mental-health
+                interpreters.
               </div>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" open>
               <summary>
                 Do you take insurance or Medicaid?
-                <span class="faq-icon">+</span>
+                <span class="faq-icon">×</span>
               </summary>
               <div class="faq-body">
-                Payment options are confirmed when we connect so we can match
-                you to the right service and funding source.
+                We're enrolled in Medicare for psychotherapy and home health.
+                We're actively credentialing with Ohio Medicaid and the major
+                managed-care plans (CareSource, Molina, Buckeye,
+                UnitedHealthcare Community Plan), and Medicare covers our
+                hospice service. Private pay and contracted partner arrangements
+                are available today. We confirm your specific coverage in
+                writing before any visit.
               </div>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" open>
               <summary>
-                What does "ASL-informed" mean?
-                <span class="faq-icon">+</span>
+                Can I get a psychological assessment for my SSDI or VA claim?
+                <span class="faq-icon">×</span>
               </summary>
               <div class="faq-body">
-                It means our team has deep fluency in ASL and Deaf culture — not
-                just basic signing. We understand the communication norms, the
-                history, and the preferences of the community we serve, and we
-                bring that into every interaction.
+                Yes. Jonathan has extensive experience with Social Security
+                Disability Determination and VA Compensation &amp; Pension
+                exams. Assessments are conducted via telehealth, include
+                standardized testing where appropriate, and produce a written
+                report you can submit directly.
               </div>
             </details>
 
-            <details class="faq-item">
+            <details class="faq-item" open>
               <summary>
-                Where do you serve?
-                <span class="faq-icon">+</span>
+                Do you provide hospice in [my county]?
+                <span class="faq-icon">×</span>
               </summary>
               <div class="faq-body">
-                In-person visits are available in Greater Columbus, Ohio.
-                Telehealth services may be available across Ohio depending on
-                the service type.
+                Our in-home hospice service covers Greater Columbus and
+                surrounding Franklin County. For families further afield, we can
+                often arrange care coordination by phone or video and work
+                alongside a local hospice provider. Reach out and we'll talk
+                through what's possible for your situation.
               </div>
             </details>
+
+            <details class="faq-item" open>
+              <summary>
+                What does "ASL-informed" mean? <span class="faq-icon">×</span>
+              </summary>
+              <div class="faq-body">
+                It means the care itself is built around ASL and Deaf culture —
+                visual communication, eye contact, plain-language English when
+                written, no assumption that English is your first language, and
+                respect for the community's history with healthcare.
+              </div>
+            </details>
+
+            <details class="faq-item" open>
+              <summary>
+                Who's in the room during my therapy session?
+                <span class="faq-icon">×</span>
+              </summary>
+              <div class="faq-body">
+                For ASL-primary clients: Jonathan (via secure video) and a
+                credentialed mental-health ASL interpreter. For English-primary
+                clients (including most hard-of-hearing and late-deafened
+                clients): just you and Jonathan, with captioning available.
+                Robert provides support before and after sessions but not as the
+                interpreter inside the clinical hour itself.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section class="location-section">
+        <div class="location-inner">
+          <p class="section-eyebrow">Where we are</p>
+          <h2>Serving Greater Columbus, Ohio.</h2>
+          <p class="location-lead">
+            In-person visits available in the Columbus metro area. Telehealth
+            available across Ohio and PSYPACT states.
+          </p>
+
+          <div class="location-grid">
+            <div class="location-map">
+              <iframe
+                title="Interpreting Homes location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97680.54!2d-83.0007!3d39.9612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b998f4ed%3A0x9a7c88b3b5e56c3b!2sColumbus%2C%20OH!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 12px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+            <div class="location-details">
+              <div class="location-card">
+                <p class="loc-label">Mailing address</p>
+                <p class="loc-value">Columbus, Ohio<br />United States</p>
+              </div>
+              <div class="location-card">
+                <p class="loc-label">Phone</p>
+                <p class="loc-value">
+                  <a href="tel:+16145550142">(614) 555-0142</a><br />
+                  VP: <a href="tel:+16145550188">(614) 555-0188</a>
+                </p>
+              </div>
+              <div class="location-card">
+                <p class="loc-label">Email</p>
+                <p class="loc-value">
+                  <a href="mailto:hello@interpretinghomes.com"
+                    >hello@interpretinghomes.com</a
+                  >
+                </p>
+              </div>
+              <div class="location-card">
+                <p class="loc-label">Services available</p>
+                <div class="loc-tags">
+                  <span class="tag">Behavioral Health</span>
+                  <span class="tag">Nursing Support</span>
+                  <span class="tag">ASL Navigation</span>
+                  <span class="tag">Telehealth</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
