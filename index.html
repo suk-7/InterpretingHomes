@@ -26,7 +26,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family: "Inter", system-ui, sans-serif;
         background: var(--cream);
@@ -58,10 +57,9 @@
         text-decoration: none;
         color: var(--cream);
       }
-      /* SVG bookmark-style logo matching screenshot */
       .logo-icon {
-        width: 32px;
         height: 38px;
+        width: auto;
         flex-shrink: 0;
       }
       .logo-name {
@@ -107,30 +105,34 @@
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 48px;
+        gap: 56px;
         align-items: center;
       }
       .hero-eyebrow {
         font-family: "Inter", sans-serif;
-        font-size: 0.82rem;
-        font-weight: 500;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
         color: #b8d4d8;
-        letter-spacing: 0.02em;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
       }
       .hero h1 {
-        font-size: clamp(2rem, 3.5vw, 3rem);
-        font-weight: 900;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        font-weight: 300;
         line-height: 1.1;
         color: #fff;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
+      }
+      .hero h1 span {
+        color: var(--terra);
       }
       .hero-lead {
-        font-size: 1.05rem;
+        font-size: 1rem;
         color: #cce5e8;
         max-width: 480px;
-        margin-bottom: 32px;
-        line-height: 1.65;
+        margin-bottom: 36px;
+        line-height: 1.7;
       }
       .hero-actions {
         display: flex;
@@ -141,11 +143,11 @@
         display: inline-block;
         background: var(--terra);
         color: #fff;
-        padding: 13px 22px;
+        padding: 14px 24px;
         border-radius: 8px;
         text-decoration: none;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 0.97rem;
       }
       .btn-primary:hover {
         background: var(--terra-dark);
@@ -154,12 +156,12 @@
         display: inline-block;
         background: transparent;
         color: var(--cream);
-        border: 1.5px solid rgba(255, 255, 255, 0.28);
-        padding: 12px 20px;
+        border: 1.5px solid rgba(255, 255, 255, 0.35);
+        padding: 13px 22px;
         border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
-        font-size: 0.95rem;
+        font-size: 0.97rem;
       }
       .btn-outline:hover {
         background: rgba(255, 255, 255, 0.05);
@@ -167,23 +169,23 @@
 
       /* ── VIDEO CARD ── */
       .video-card {
-        background: rgba(0, 0, 0, 0.18);
-        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.22);
+        border-radius: 14px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
       }
       .video-screen {
-        min-height: 340px;
+        min-height: 360px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(0, 0, 0, 0.22);
+        background: rgba(0, 0, 0, 0.18);
         flex: 1;
       }
       .play-btn {
-        width: 56px;
-        height: 56px;
+        width: 60px;
+        height: 60px;
         background: rgba(255, 255, 255, 0.88);
         border-radius: 50%;
         display: flex;
@@ -199,11 +201,45 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 18px;
-        font-size: 0.82rem;
+        padding: 14px 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
         color: #cde0e4;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.12);
         border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      /* ── CREDENTIALS STRIP ── */
+      .creds-strip {
+        background: var(--cream-dark);
+        padding: 22px 40px;
+        border-bottom: 1px solid rgba(210, 196, 172, 0.5);
+      }
+      .creds-inner {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 40px;
+      }
+      .cred-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: #2e5059;
+      }
+      .cred-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--terra);
+        flex-shrink: 0;
+      }
+      .cred-item strong {
+        font-weight: 700;
+        color: var(--teal-dark);
       }
 
       /* ── WHO WE SERVE ── */
@@ -326,6 +362,12 @@
           grid-template-columns: 1fr;
           gap: 32px;
         }
+        .creds-strip {
+          padding: 20px;
+        }
+        .creds-inner {
+          gap: 10px 24px;
+        }
         .who-section {
           padding: 44px 20px;
         }
@@ -346,21 +388,19 @@
     <!-- HEADER -->
     <header>
       <a href="index.html" class="logo">
-        <!-- Two-bookmark logo from screenshot -->
         <img
           src="./assets/logo.svg"
           alt="Interpreting Homes"
           class="logo-icon"
         />
-          <path d="M2 2h11v34l-5.5-5-5.5 5V2z" fill="#c26b4d" />
-          <path d="M13 2h11v34l-5.5-5-5.5 5V2z" fill="#fbf6e8" opacity="0.85" />
-        </svg>
         <span class="logo-name">Interpreting Homes</span>
       </a>
       <nav>
         <a href="services.html">Services</a>
+        <a href="ourCareModel.html">Our care model</a>
         <a href="about.html">About</a>
         <a href="partners.html">For partners</a>
+        <a href="pricing.html">Pricing</a>
         <a href="get-started.html" class="nav-cta">Get started</a>
       </nav>
     </header>
@@ -370,12 +410,16 @@
       <div class="hero-inner">
         <div>
           <p class="hero-eyebrow">
-            Columbus, Ohio · Serving Deaf and Hard-of-Hearing Ohioans
+            Columbus, Ohio · Serving Deaf &amp; Hard-of-Hearing Ohioans
           </p>
-          <h1>Care that meets you where you are.</h1>
+          <h1>
+            Doctoral-level clinical care,
+            <span>delivered the way you communicate.</span>
+          </h1>
           <p class="hero-lead">
-            Behavioral health, nursing support, and ASL-informed health
-            navigation — delivered by people who sign with you, not at you.
+            Psychotherapy, skilled nursing, hospice, and ASL-informed behavioral
+            health support — under one team that actually coordinates with
+            itself.
           </p>
           <div class="hero-actions">
             <a href="get-started.html" class="btn-primary"
@@ -399,6 +443,32 @@
         </div>
       </div>
     </section>
+
+    <!-- CREDENTIALS STRIP -->
+    <div class="creds-strip">
+      <div class="creds-inner">
+        <div class="cred-item">
+          <span class="cred-dot"></span><strong>PsyD</strong> Clinical
+          Psychology
+        </div>
+        <div class="cred-item">
+          <span class="cred-dot"></span><strong>PSYPACT®</strong> Authorized in
+          Ohio
+        </div>
+        <div class="cred-item">
+          <span class="cred-dot"></span><strong>MSN, RN</strong> Hospice / Home
+          Health
+        </div>
+        <div class="cred-item">
+          <span class="cred-dot"></span><strong>ASL-fluent</strong> Care
+          Navigation
+        </div>
+        <div class="cred-item">
+          <span class="cred-dot"></span
+          ><strong>HIPAA-compliant</strong> Telehealth
+        </div>
+      </div>
+    </div>
 
     <!-- WHO WE SERVE -->
     <section class="who-section">
